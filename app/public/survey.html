@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <h1>Hi</h1>
+    <script>
+        var newScore = [5,
+            1,
+            5,
+            1,
+            5,
+            2,
+            1,
+            5,
+            4,
+            4];
+        console.log(newScore);
+        var obj = {
+            name: "jon",
+            score: newScore
+        };
+        // $.ajax("/api/friends", {
+        //     type: "POST",
+        //     data: obj
+        // }).then(function (data) {
+
+        //     console.log("back1", data);
+        // });
+        console.log(obj)
+        $.post('/api/friends', obj, function (data) {
+            console.log("I am back", data)
+            // open a modal with the pic and the name
+        })
+
+    </script>
+</body>
+
+</html>
